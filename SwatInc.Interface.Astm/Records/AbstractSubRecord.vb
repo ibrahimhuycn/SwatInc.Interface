@@ -1,6 +1,6 @@
 ﻿Namespace Records
 
-    Public Class BaseRecord
+    Public Class AbstractSubRecord
 
     End Class
 

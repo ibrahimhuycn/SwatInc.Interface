@@ -5,9 +5,14 @@ VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SwatInc.Interface.Astm", "SwatInc.Interface.Astm\SwatInc.Interface.Astm.vbproj", "{ADE9049F-F3B2-41B1-8A07-669145A64DDB}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SwatInc.Interface.TestNinja", "SwatInc.Interface.TestNinja\SwatInc.Interface.TestNinja.vbproj", "{C6AA9079-A779-442F-966F-142C282354EA}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SwatInc.Extensions", "SwatInc.Extensions\SwatInc.Extensions.shproj", "{897DEE2A-BE41-4320-ABE5-DB939025F8B7}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SwatInc.Interface.TestNinja", "SwatInc.Interface.TestNinja\SwatInc.Interface.TestNinja.vbproj", "{EE04078E-E798-4168-BD40-BAB47F448315}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5976EF6E-63DE-4A2F-9819-1AF213DEF990}"
+	ProjectSection(SolutionItems) = preProject
+		TODO.txt = TODO.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -22,10 +27,10 @@ Global
 		{ADE9049F-F3B2-41B1-8A07-669145A64DDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADE9049F-F3B2-41B1-8A07-669145A64DDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADE9049F-F3B2-41B1-8A07-669145A64DDB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C6AA9079-A779-442F-966F-142C282354EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C6AA9079-A779-442F-966F-142C282354EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C6AA9079-A779-442F-966F-142C282354EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C6AA9079-A779-442F-966F-142C282354EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE04078E-E798-4168-BD40-BAB47F448315}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE04078E-E798-4168-BD40-BAB47F448315}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE04078E-E798-4168-BD40-BAB47F448315}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE04078E-E798-4168-BD40-BAB47F448315}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
