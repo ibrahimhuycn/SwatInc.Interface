@@ -1,7 +1,6 @@
 ﻿Imports System.Reflection
 Imports System.Text
 Imports SwatInc.Interface.Astm.AstmConstants
-Imports SwatInc.Interface.Astm.AstmDelimiters
 Imports SwatInc.Interface.Astm.ErrorHandling.ErrorCodes.Errors
 
 Public Class AstmFunctions
@@ -33,7 +32,7 @@ Public Class AstmFunctions
         Dim myName As String = MethodBase.GetCurrentMethod().Name
         log.Info(String.Format("Method: {0} Frame: {1}", myName, AstmFrame))
 
-        Dim splitFrame() As String = AstmFrame.Split(ChrW(fieldDelimiter))
+        Dim splitFrame() As String = AstmFrame.Split(FieldDelimiter)
         Dim frameLetter As String = Right(splitFrame(0), 1)
         Dim returnFrameType = invalidFrameType
 
@@ -77,9 +76,9 @@ Public Class AstmFunctions
         For idx As Integer = 0 To Frame.Length - 1
             byteVal = Convert.ToInt32(Frame(idx))
             Select Case byteVal
-                Case STX
+                Case AscW(STX)
                     sumOfChars = 0
-                Case ETX, ETB
+                Case AscW(ETX), AscW(ETB)
                     sumOfChars += byteVal
                     complete = True
                 Case Else
@@ -136,18 +135,18 @@ Public Class AstmFunctions
         Dim GotETX As Boolean = False
 
         'Look for ASCII [STX] at the beginning of the frame.
-        If Left(validatedFrame, 1) = ChrW(2) Then
+        If Left(validatedFrame, 1) = STX Then
             'Starting at the end of the frame to look for pattern [CR][ETX] Or [ETB]
             For idx As Integer = validatedFrame.Length - 1 To 0 Step -1
 
                 byteVal = Convert.ToInt32(validatedFrame(idx))
                 ' MsgBox (byteVal)
                 Select Case byteVal
-                    Case CR   'the [CR][LF] should not be considered as a [CR] for end of frame.
+                    Case AscW(CR)   'the [CR][LF] should not be considered as a [CR] for end of frame.
                         If GotETX = True Then isComplete = True
-                    Case ETX
+                    Case AscW(ETX)
                         GotETX = True
-                    Case ETB
+                    Case AscW(ETB)
                         isComplete = True
                         expectNextBlock = True
                 End Select
@@ -178,15 +177,15 @@ Public Class AstmFunctions
 
         Dim replacedAstmFrame As StringBuilder = New StringBuilder(AstmFrame)
 
-        replacedAstmFrame.Replace("[STX]", ChrW(STX))
-        replacedAstmFrame.Replace("[ETX]", ChrW(ETX))
-        replacedAstmFrame.Replace("[EOT]", ChrW(EOT))
-        replacedAstmFrame.Replace("[ENQ]", ChrW(ENQ))
-        replacedAstmFrame.Replace("[ACK]", ChrW(ACK))
-        replacedAstmFrame.Replace("[LF]", ChrW(LF))
-        replacedAstmFrame.Replace("[CR]", ChrW(CR))
-        replacedAstmFrame.Replace("[NAK]", ChrW(NAK))
-        replacedAstmFrame.Replace("[ETB]", ChrW(ETB))
+        replacedAstmFrame.Replace("[STX]", STX)
+        replacedAstmFrame.Replace("[ETX]", ETX)
+        replacedAstmFrame.Replace("[EOT]", EOT)
+        replacedAstmFrame.Replace("[ENQ]", ENQ)
+        replacedAstmFrame.Replace("[ACK]", ACK)
+        replacedAstmFrame.Replace("[LF]", LF)
+        replacedAstmFrame.Replace("[CR]", CR)
+        replacedAstmFrame.Replace("[NAK]", NAK)
+        replacedAstmFrame.Replace("[ETB]", ETB)
 
         log.Info(myName & " returned " & replacedAstmFrame.ToString)
         Return replacedAstmFrame.ToString

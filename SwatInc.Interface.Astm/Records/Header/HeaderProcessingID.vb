@@ -1,18 +1,18 @@
-﻿Namespace Records.NestedFields
+﻿Namespace Records
 
     Public Enum HeaderProcessingID
         None
 
-        <LisEnum("P")>
+        <AstmEnum("P")>
         Production
 
-        <LisEnum("T")>
+        <AstmEnum("T")>
         Training
 
-        <LisEnum("D")>
+        <AstmEnum("D")>
         Debugging
 
-        <LisEnum("Q")>
+        <AstmEnum("Q")>
         QualityControl
 
     End Enum

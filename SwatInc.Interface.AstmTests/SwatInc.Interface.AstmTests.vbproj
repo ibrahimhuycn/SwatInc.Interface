@@ -1,54 +1,41 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ADE9049F-F3B2-41B1-8A07-669145A64DDB}</ProjectGuid>
+    <ProjectGuid>{C69DCA4B-5FE3-4006-999D-546549F824CD}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <StartupObject>
-    </StartupObject>
-    <RootNamespace>SwatInc.Interface.Astm</RootNamespace>
-    <AssemblyName>SwatInc.Interface.Astm</AssemblyName>
+    <RootNamespace>SwatInc.Interface.AstmTests</RootNamespace>
+    <AssemblyName>SwatInc.Interface.AstmTests</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
-    <ApplicationVersion>0.0.0.%2a</ApplicationVersion>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>SwatInc.Interface.Astm.xml</DocumentationFile>
+    <DocumentationFile>SwatInc.Interface.AstmTests.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>x64</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <DefineDebug>false</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>SwatInc.Interface.Astm.xml</DocumentationFile>
+    <DocumentationFile>SwatInc.Interface.AstmTests.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -68,37 +55,35 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\x64\Debug\</OutputPath>
-    <DocumentationFile>SwatInc.Interface.Astm.xml</DocumentationFile>
+    <DocumentationFile>SwatInc.Interface.AstmTests.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\x64\Release\</OutputPath>
-    <DocumentationFile>SwatInc.Interface.Astm.xml</DocumentationFile>
+    <DocumentationFile>SwatInc.Interface.AstmTests.xml</DocumentationFile>
     <Optimize>true</Optimize>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MSTest.TestFramework.1.2.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -110,20 +95,10 @@
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
     <Import Include="System.Threading.Tasks" />
+    <Import Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AstmConstants.vb" />
-    <Compile Include="AstmFunctions.vb" />
-    <Compile Include="Communications\Ethernet.vb" />
-    <Compile Include="Communications\Serial.vb" />
-    <Compile Include="Delimiters.vb" />
-    <Compile Include="ErrorHandling\ErrorCodes.vb" />
-    <Compile Include="NestedDelimiting.vb" />
-    <Compile Include="Records\AbstractRecord.vb" />
-    <Compile Include="Records\AbstractPartialRecord.vb" />
-    <Compile Include="Records\Comment.vb" />
-    <Compile Include="AstmDateTimeUsage.vb" />
-    <Compile Include="Records\Header\HeaderRecord.vb" />
+    <Compile Include="AstmFunctionsTests.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -139,30 +114,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Records\Header\HeaderProcessingID.vb" />
-    <Compile Include="AstmDateTimeUsageAttribute.vb" />
-    <Compile Include="Records\LISExtensions.vb" />
-    <Compile Include="Records\Manufacturer.vb" />
-    <Compile Include="AstmEnumAttributeAttribute.vb" />
-    <Compile Include="Records\Order\OrderRecord.vb" />
-    <Compile Include="Records\Order\OrderActionCode.vb" />
-    <Compile Include="Records\Order\OrderPriority.vb" />
-    <Compile Include="Records\Order\OrderReportType.vb" />
-    <Compile Include="Records\Patient\PatientName.vb" />
-    <Compile Include="Records\PartialRecords\UniversalTestID.vb" />
-    <Compile Include="Records\Patient\PatientRecord.vb" />
-    <Compile Include="Records\Patient\PatientSex.vb" />
-    <Compile Include="Records\Query\QueryRecord.vb" />
-    <Compile Include="Records\RecordFieldIndexAttribute.vb" />
-    <Compile Include="Records\RecordFields.vb" />
-    <Compile Include="Records\Result\ResultRecord.vb" />
-    <Compile Include="Records\Result\ResultAbnormalFlags.vb" />
-    <Compile Include="Records\Result\ResultNatureOfAbnormalityTestingSet.vb" />
-    <Compile Include="Records\Result\ResultStatus.vb" />
-    <Compile Include="Records\Scientific.vb" />
-    <Compile Include="Records\Query\StartingRange.vb" />
-    <Compile Include="Records\Terminator\TerminationCode.vb" />
-    <Compile Include="Records\Terminator\TerminatorRecord.vb" />
+    <Compile Include="NestedDelimitingTests.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -182,21 +134,26 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
+    <Folder Include="CommunicationsTests\" />
+    <Folder Include="RecordsTests\" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SwatInc.Interface.Astm\SwatInc.Interface.Astm.vbproj">
+      <Project>{ade9049f-f3b2-41b1-8a07-669145a64ddb}</Project>
+      <Name>SwatInc.Interface.Astm</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.props'))" />
+    <Error Condition="!Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets'))" />
+  </Target>
+  <Import Project="..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.2.0\build\net45\MSTest.TestAdapter.targets')" />
 </Project>
