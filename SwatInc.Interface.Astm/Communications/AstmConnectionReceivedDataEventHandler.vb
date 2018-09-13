@@ -1,0 +1,1 @@
+﻿Public Delegate Sub AstmConnectionReceivedDataEventHandler(ByVal Sender As Object, ByVal e As AstmConnectionReceivedDataEventArgs)

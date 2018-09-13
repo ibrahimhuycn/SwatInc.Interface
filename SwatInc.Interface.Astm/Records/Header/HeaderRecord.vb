@@ -1,4 +1,4 @@
-﻿Namespace Records
+﻿Namespace Records.Header
 
     Public Class HeaderRecord
         Inherits AbstractAstmRecord

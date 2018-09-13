@@ -1,6 +1,4 @@
-﻿Imports SwatInc.Interface.Astm.Records
-
-<AttributeUsage(AttributeTargets.Property)>
+﻿<AttributeUsage(AttributeTargets.Property)>
 Public Class AstmDateTimeUsageAttribute
     Inherits Attribute
 

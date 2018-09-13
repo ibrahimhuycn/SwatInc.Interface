@@ -114,11 +114,28 @@
   <ItemGroup>
     <Compile Include="AstmConstants.vb" />
     <Compile Include="AstmFunctions.vb" />
+    <Compile Include="AstmRecordType.vb" />
+    <Compile Include="AstmParser.vb" />
+    <Compile Include="Communications\AstmConnectionException.vb" />
+    <Compile Include="Communications\Lis01A2Connection.vb" />
     <Compile Include="Communications\Ethernet.vb" />
-    <Compile Include="Communications\Serial.vb" />
+    <Compile Include="Communications\IAstmConnection.vb" />
+    <Compile Include="Communications\AstmConnectionReceivedDataEventArgs.vb" />
+    <Compile Include="Communications\AstmConnectionReceivedDataEventHandler.vb" />
+    <Compile Include="Communications\AstmConnectionStatus.vb" />
+    <Compile Include="Communications\ILis01A2Connection.vb" />
+    <Compile Include="Communications\Lis01A02TCPConnection.vb" />
+    <Compile Include="Communications\Astm01A02RS232Connection.vb" />
+    <Compile Include="Communications\Lis01A02TCPConnectionException.vb" />
+    <Compile Include="Communications\Lis01A2ConnectionException.vb" />
     <Compile Include="Delimiters.vb" />
     <Compile Include="ErrorHandling\ErrorCodes.vb" />
+    <Compile Include="ErrorHandling\AstmParserException.vb" />
+    <Compile Include="ErrorHandling\AstmParserReceiveTimeOutException.vb" />
+    <Compile Include="ErrorHandling\AstmParserEstablishmentFailedException.vb" />
     <Compile Include="NestedDelimiting.vb" />
+    <Compile Include="ReceiveRecordEventArgs.vb" />
+    <Compile Include="ReceiveRecordEventHandler.vb" />
     <Compile Include="Records\AbstractRecord.vb" />
     <Compile Include="Records\AbstractPartialRecord.vb" />
     <Compile Include="Records\Comment.vb" />
@@ -163,6 +180,7 @@
     <Compile Include="Records\Query\StartingRange.vb" />
     <Compile Include="Records\Terminator\TerminationCode.vb" />
     <Compile Include="Records\Terminator\TerminatorRecord.vb" />
+    <Compile Include="SendProgressEventArgs.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
